@@ -1,0 +1,35 @@
+###### Unit cell extraction parameter file
+
+### Specify source path (*.tif)
+sourcePath testimages/hexVacancy_Gaussian0.1.tif
+
+### Specify output directory
+outputDir "./"
+
+
+
+
+### Additional parameters (optional)
+
+### Angle estimation algorithm
+# 1 = Fourier peaks
+# 2 = Projective standard deviation
+angleAlgType 2
+
+### NOTE:	For the bumps3 images, one gets better results using angleAlgType 1
+###			In the GCPR publication we had used angleAlgType 2, but the PSD peak
+###			extraction code has changed since then.
+###			While in our experience the changes have generally improved
+###			the performance, they turn out to be worse in this particular case.
+
+
+### Fundamental period estimation algorithm
+# 1 = Sum of Sines fit
+# 2 = Periodicity energy minimization (clustering of local minima + AIC)
+periodAlgType 2
+
+### Refine unit cell using non-linear optimization
+refine 1
+
+### Switch verbose console output on / off
+quietMode 0
